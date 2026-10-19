@@ -1,0 +1,6 @@
+{
+  "name": "The Cake Wala — Premium Bakery & Celebration Cakes",
+  "description": "Artisanal handcrafted cakes, luxury celebration desserts, and bespoke custom orders for birthdays, anniversaries, and weddings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

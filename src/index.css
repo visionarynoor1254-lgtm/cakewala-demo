@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  --font-display: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+
+  --color-cream: #F8F3EB;
+  --color-cream-light: #FCF9F5;
+  --color-cream-card: #FFFFFF;
+  --color-cream-border: rgba(75, 48, 40, 0.12);
+  --color-blush: #E8B3B5;
+  --color-blush-soft: #F9EBEB;
+  --color-chocolate: #4B3028;
+  --color-chocolate-dark: #301E19;
+  --color-chocolate-muted: #7E655D;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #F8F3EB;
+    color: #4B3028;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+/* Custom scrollbar for drawer and modals */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F3EB;
+}
+::-webkit-scrollbar-thumb {
+  background: #E8B3B5;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C49193;
+}
+
