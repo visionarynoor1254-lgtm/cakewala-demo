@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Eye, X, ZoomIn, Instagram } from 'lucide-react';
 import { WHATSAPP_LINK } from '../data/bakeryData';
+import { BakeryImage } from './BakeryImage';
 
 interface GalleryItem {
   id: string;
@@ -8,6 +9,7 @@ interface GalleryItem {
   category: string;
   image: string;
   serves: string;
+  fallbackType?: 'hero' | 'birthday' | 'chocolate' | 'wedding' | 'cupcakes' | 'anniversary' | 'custom';
 }
 
 const GALLERY_ITEMS: GalleryItem[] = [
@@ -15,43 +17,49 @@ const GALLERY_ITEMS: GalleryItem[] = [
     id: 'g-1',
     title: 'The Royal Ivory Wedding Arch Tier',
     category: 'Wedding',
-    image: '/src/assets/images/category_wedding_cake_1792399128716.jpg',
+    image: '/images/bakery/category_wedding_cake.jpg',
     serves: '65 guests',
+    fallbackType: 'wedding',
   },
   {
     id: 'g-2',
     title: 'Belgian Chocolate & Berry Drip Tier',
     category: 'Celebration',
-    image: '/src/assets/images/hero_celebration_cake_1792399128033.jpg',
+    image: '/images/bakery/hero_celebration_cake.jpg',
     serves: '12 guests',
+    fallbackType: 'hero',
   },
   {
     id: 'g-3',
     title: 'Bespoke Sugar Petal Monogram',
     category: 'Custom Designer',
-    image: '/src/assets/images/category_custom_cake_1792399147187.jpg',
+    image: '/images/bakery/category_custom_cake.jpg',
     serves: '25 guests',
+    fallbackType: 'custom',
   },
   {
     id: 'g-4',
     title: 'Blush Velvet Birthday Rosette',
     category: 'Birthday',
-    image: '/src/assets/images/category_birthday_cake_1792399128641.jpg',
+    image: '/images/bakery/category_birthday_cake.jpg',
     serves: '15 guests',
+    fallbackType: 'birthday',
   },
   {
     id: 'g-5',
     title: 'Gourmet Macarons & Pastry Tier',
     category: 'High Tea & Desserts',
-    image: '/src/assets/images/category_cupcakes_pastries_1792399129984.jpg',
+    image: '/images/bakery/category_cupcakes_pastries.jpg',
     serves: 'Assorted box',
+    fallbackType: 'cupcakes',
   },
   {
     id: 'g-6',
     title: 'Golden Romance Anniversary Tier',
     category: 'Anniversary',
-    image: '/src/assets/images/category_anniversary_cake_1792399147562.jpg',
+    image: '/images/bakery/category_anniversary_cake.jpg',
     serves: '16 guests',
+    fallbackType: 'anniversary',
   },
 ];
 
@@ -84,10 +92,10 @@ export const GallerySection: React.FC = () => {
               className="group relative cursor-pointer overflow-hidden rounded-xl bg-white border border-[#4B3028]/10 shadow-sm hover:shadow-xl transition-all duration-300"
             >
               <div className="aspect-[4/3] overflow-hidden bg-[#FCF9F5]">
-                <img
+                <BakeryImage
                   src={item.image}
                   alt={item.title}
-                  referrerPolicy="no-referrer"
+                  fallbackType={item.fallbackType || 'default'}
                   className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500 ease-out"
                 />
               </div>
@@ -149,12 +157,14 @@ export const GallerySection: React.FC = () => {
               <X className="w-5 h-5" />
             </button>
 
-            <img
-              src={selectedPhoto.image}
-              alt={selectedPhoto.title}
-              referrerPolicy="no-referrer"
-              className="w-full max-h-[70vh] object-cover"
-            />
+            <div className="w-full max-h-[70vh] overflow-hidden">
+              <BakeryImage
+                src={selectedPhoto.image}
+                alt={selectedPhoto.title}
+                fallbackType={selectedPhoto.fallbackType || 'default'}
+                className="w-full max-h-[70vh] object-cover"
+              />
+            </div>
 
             <div className="p-6 bg-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>

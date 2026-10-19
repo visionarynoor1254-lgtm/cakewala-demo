@@ -2,6 +2,7 @@ import React from 'react';
 import { ShoppingBag, Eye, Star, MessageCircle } from 'lucide-react';
 import { CakeProduct, CakeCategory } from '../types';
 import { WHATSAPP_LINK } from '../data/bakeryData';
+import { BakeryImage } from './BakeryImage';
 
 interface PopularCakesProps {
   products: CakeProduct[];
@@ -79,10 +80,9 @@ export const PopularCakes: React.FC<PopularCakesProps> = ({
               >
                 {/* Image area */}
                 <div className="relative aspect-[4/3] overflow-hidden bg-[#F8F3EB]">
-                  <img
+                  <BakeryImage
                     src={product.image}
                     alt={product.name}
-                    referrerPolicy="no-referrer"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                   />
 

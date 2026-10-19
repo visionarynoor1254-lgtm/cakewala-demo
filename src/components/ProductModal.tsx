@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { X, Star, Check, ShoppingBag, MessageCircle, Clock, ShieldCheck } from 'lucide-react';
 import { CakeProduct, CakeSize } from '../types';
 import { WHATSAPP_LINK } from '../data/bakeryData';
+import { BakeryImage } from './BakeryImage';
 
 interface ProductModalProps {
   product: CakeProduct | null;
@@ -59,13 +60,12 @@ Please confirm availability and delivery slots!`;
 
         {/* Left Column: Product Image */}
         <div className="md:w-5/12 bg-white relative">
-          <img
+          <BakeryImage
             src={product.image}
             alt={product.name}
-            referrerPolicy="no-referrer"
             className="w-full h-56 md:h-full object-cover"
           />
-          <div className="absolute top-4 left-4 flex flex-col gap-1.5">
+          <div className="absolute top-4 left-4 flex flex-col gap-1.5 z-10">
             <span className="bg-[#4B3028] text-[#F8F3EB] text-[10px] tracking-wider uppercase font-semibold px-2.5 py-1 rounded">
               {product.category}
             </span>

@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { CATEGORIES_DATA } from '../data/bakeryData';
 import { CakeCategory } from '../types';
+import { BakeryImage } from './BakeryImage';
 
 interface CategorySectionProps {
   onSelectCategory: (category: CakeCategory) => void;
@@ -37,10 +38,22 @@ export const CategorySection: React.FC<CategorySectionProps> = ({
           >
             {/* Image Container with Hover Scale */}
             <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#FCF9F5]">
-              <img
+              <BakeryImage
                 src={cat.image}
                 alt={cat.name}
-                referrerPolicy="no-referrer"
+                fallbackType={
+                  cat.id === 'Birthday Cakes'
+                    ? 'birthday'
+                    : cat.id === 'Chocolate Cakes'
+                    ? 'chocolate'
+                    : cat.id === 'Wedding Cakes'
+                    ? 'wedding'
+                    : cat.id === 'Anniversary Cakes'
+                    ? 'anniversary'
+                    : cat.id === 'Cupcakes & Pastries'
+                    ? 'cupcakes'
+                    : 'custom'
+                }
                 className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />

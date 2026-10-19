@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { X, Trash2, ShoppingBag, MessageCircle, ArrowRight, CheckCircle2, ShieldCheck } from 'lucide-react';
 import { CartItem } from '../types';
 import { WHATSAPP_LINK } from '../data/bakeryData';
+import { BakeryImage } from './BakeryImage';
 
 interface CartDrawerProps {
   isOpen: boolean;
@@ -246,10 +247,9 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                       key={item.cartItemId}
                       className="bg-white p-4 rounded-xl border border-[#4B3028]/10 shadow-xs flex gap-3"
                     >
-                      <img
+                      <BakeryImage
                         src={item.product.image}
                         alt={item.product.name}
-                        referrerPolicy="no-referrer"
                         className="w-16 h-16 rounded-lg object-cover bg-[#F8F3EB] shrink-0"
                       />
 

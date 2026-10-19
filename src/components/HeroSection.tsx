@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, MessageCircle, Sparkles, Heart, Clock, Award } from 'lucide-react';
 import { HERO_IMAGE, WHATSAPP_LINK } from '../data/bakeryData';
+import { BakeryImage } from './BakeryImage';
 
 interface HeroSectionProps {
   onExploreClick: () => void;
@@ -85,10 +86,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               <div className="absolute -inset-3 bg-[#E8B3B5]/20 rounded-2xl -rotate-1 pointer-events-none" />
               
               <div className="relative overflow-hidden rounded-xl bg-white shadow-xl border border-[#4B3028]/10">
-                <img
+                <BakeryImage
                   src={HERO_IMAGE}
                   alt="Belgian Dark Chocolate Celebration Cake on Ceramic Stand"
-                  referrerPolicy="no-referrer"
+                  loading="eager"
+                  fallbackType="hero"
                   className="w-full h-[400px] sm:h-[480px] lg:h-[520px] object-cover hover:scale-105 transition-transform duration-700 ease-out"
                 />
 

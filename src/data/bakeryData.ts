@@ -1,6 +1,6 @@
 import { CakeProduct, Testimonial } from '../types';
 
-export const HERO_IMAGE = '/src/assets/images/hero_celebration_cake_1792399128033.jpg';
+export const HERO_IMAGE = '/images/bakery/hero_celebration_cake.jpg';
 
 export const CATEGORIES_DATA = [
   {
@@ -8,42 +8,42 @@ export const CATEGORIES_DATA = [
     name: 'Birthday Cakes',
     tagline: 'Joyful celebrations & sparkler moments',
     count: 12,
-    image: '/src/assets/images/category_birthday_cake_1792399128641.jpg',
+    image: '/images/bakery/category_birthday_cake.jpg',
   },
   {
     id: 'Chocolate Cakes',
     name: 'Chocolate Cakes',
     tagline: 'Pure Belgian ganache & dark cocoa',
     count: 15,
-    image: '/src/assets/images/category_chocolate_truffle_1792399129328.jpg',
+    image: '/images/bakery/category_chocolate_truffle.jpg',
   },
   {
     id: 'Wedding Cakes',
     name: 'Wedding Cakes',
     tagline: 'Grand bespoke tiers & handcrafted blossoms',
     count: 8,
-    image: '/src/assets/images/category_wedding_cake_1792399128716.jpg',
+    image: '/images/bakery/category_wedding_cake.jpg',
   },
   {
     id: 'Anniversary Cakes',
     name: 'Anniversary Cakes',
     tagline: 'Romantic notes of berries & vintage gold',
     count: 10,
-    image: '/src/assets/images/category_anniversary_cake_1792399147562.jpg',
+    image: '/images/bakery/category_anniversary_cake.jpg',
   },
   {
     id: 'Cupcakes & Pastries',
     name: 'Cupcakes & Pastries',
     tagline: 'Parisian macarons & fresh berry tarts',
     count: 18,
-    image: '/src/assets/images/category_cupcakes_pastries_1792399129984.jpg',
+    image: '/images/bakery/category_cupcakes_pastries.jpg',
   },
   {
     id: 'Custom Cakes',
     name: 'Custom Cakes',
     tagline: 'Tailored designs, sculptured sugar & personal themes',
     count: 24,
-    image: '/src/assets/images/category_custom_cake_1792399147187.jpg',
+    image: '/images/bakery/category_custom_cake.jpg',
   },
 ];
 
@@ -60,7 +60,7 @@ export const PRODUCTS: CakeProduct[] = [
     spongeFlavor: 'Valrhona Chocolate Sponge',
     fillingFlavor: 'Callebaut Dark Chocolate Truffle',
     dietary: ['100% Eggless', 'Nut Free'],
-    image: '/src/assets/images/hero_celebration_cake_1792399128033.jpg',
+    image: '/images/bakery/hero_celebration_cake.jpg',
     isBestseller: true,
     preparationTime: '4 hours notice',
     sizes: [
@@ -81,7 +81,7 @@ export const PRODUCTS: CakeProduct[] = [
     spongeFlavor: 'Madagascar Vanilla Bean',
     fillingFlavor: 'Strawberry Raspberry Compote & Silk Cream',
     dietary: ['100% Eggless'],
-    image: '/src/assets/images/category_birthday_cake_1792399128641.jpg',
+    image: '/images/bakery/category_birthday_cake.jpg',
     isBestseller: true,
     preparationTime: '6 hours notice',
     sizes: [
@@ -102,7 +102,7 @@ export const PRODUCTS: CakeProduct[] = [
     spongeFlavor: 'Espresso Fudge Cake',
     fillingFlavor: 'Silky Gianduja & Roasted Hazelnut Praline',
     dietary: ['100% Eggless'],
-    image: '/src/assets/images/category_chocolate_truffle_1792399129328.jpg',
+    image: '/images/bakery/category_chocolate_truffle.jpg',
     isBestseller: true,
     preparationTime: '4 hours notice',
     sizes: [
@@ -123,7 +123,7 @@ export const PRODUCTS: CakeProduct[] = [
     spongeFlavor: 'Champagne & Lemon Elderflower',
     fillingFlavor: 'White Chocolate Mascarpone & Lemon Curd',
     dietary: ['100% Eggless', 'Nut Free'],
-    image: '/src/assets/images/category_wedding_cake_1792399128716.jpg',
+    image: '/images/bakery/category_wedding_cake.jpg',
     isBestseller: true,
     preparationTime: '48 hours notice',
     sizes: [
@@ -144,7 +144,7 @@ export const PRODUCTS: CakeProduct[] = [
     spongeFlavor: 'Traditional Crimson Red Velvet',
     fillingFlavor: 'Tahitian Vanilla Cream Cheese Frosting',
     dietary: ['100% Eggless', 'Nut Free'],
-    image: '/src/assets/images/category_anniversary_cake_1792399147562.jpg',
+    image: '/images/bakery/category_anniversary_cake.jpg',
     isBestseller: true,
     preparationTime: '6 hours notice',
     sizes: [
@@ -165,7 +165,7 @@ export const PRODUCTS: CakeProduct[] = [
     spongeFlavor: 'Almond & Vanilla Sponge Assortment',
     fillingFlavor: 'Chantilly Crème & Tart Raspberry Coulis',
     dietary: ['100% Eggless'],
-    image: '/src/assets/images/category_cupcakes_pastries_1792399129984.jpg',
+    image: '/images/bakery/category_cupcakes_pastries.jpg',
     isBestseller: false,
     preparationTime: 'Same day (2 hours)',
     sizes: [
@@ -186,7 +186,7 @@ export const PRODUCTS: CakeProduct[] = [
     spongeFlavor: 'Custom: Choice of Vanilla, Chocolate, or Rose',
     fillingFlavor: 'Custom Ganache or Berry Silk Cream',
     dietary: ['100% Eggless', 'Nut Free'],
-    image: '/src/assets/images/category_custom_cake_1792399147187.jpg',
+    image: '/images/bakery/category_custom_cake.jpg',
     isBestseller: true,
     preparationTime: '24 hours notice',
     sizes: [
@@ -207,7 +207,7 @@ export const PRODUCTS: CakeProduct[] = [
     spongeFlavor: 'Brown Butter Sponge',
     fillingFlavor: 'Fleur de Sel Caramel & Candied Pecan Praline',
     dietary: ['100% Eggless'],
-    image: '/src/assets/images/hero_celebration_cake_1792399128033.jpg',
+    image: '/images/bakery/hero_celebration_cake.jpg',
     isBestseller: false,
     preparationTime: '4 hours notice',
     sizes: [

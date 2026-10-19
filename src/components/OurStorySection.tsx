@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, Sparkles, Coffee, Heart, Award } from 'lucide-react';
 import { WHATSAPP_LINK } from '../data/bakeryData';
+import { BakeryImage } from './BakeryImage';
 
 interface OurStorySectionProps {
   onExploreCakes: () => void;
@@ -15,10 +16,10 @@ export const OurStorySection: React.FC<OurStorySectionProps> = ({ onExploreCakes
           <div className="lg:col-span-6 relative">
             <div className="relative mx-auto max-w-md lg:max-w-none">
               <div className="rounded-2xl overflow-hidden shadow-2xl border border-[#4B3028]/10 bg-white">
-                <img
-                  src="/src/assets/images/category_birthday_cake_1792399128641.jpg"
-                  alt="Pastry Chef decorating birthday cake"
-                  referrerPolicy="no-referrer"
+                <BakeryImage
+                  src="/images/bakery/category_birthday_cake.jpg"
+                  alt="Pastry Chef decorating artisanal birthday cake"
+                  fallbackType="birthday"
                   className="w-full h-[420px] sm:h-[480px] object-cover"
                 />
               </div>
